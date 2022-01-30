@@ -31,9 +31,20 @@ app.get("/courses",(req,resp)=>{
         }
     })
 })
+app.get("/applicants",(req,resp)=>{
+    client.query("select * from applicants",(error,result)=>{
+        if(error){
+            resp.send("Error: "+error)
+        }
+        else{
+        resp.send(result.rows)
+
+        }
+    })
+})
 
 
-const PORT=process.env.PORT || 5500 || 8000;
+const PORT=process.env.PORT || 5500 ;
 app.listen(PORT,()=>{
     console.log("App started to port "+PORT);
 })
