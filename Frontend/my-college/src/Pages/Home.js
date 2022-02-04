@@ -15,11 +15,13 @@ const Home = () => {
         <section id="homeButtons">
        <Link to="/courses"> 
        <button> View Our Courses </button>
+       </Link>
+       <Link to="/enrollments"> 
+       <button> Get Enrolled Today </button>
 
-       
        </Link>
 
-          <button> Get Enrolled Today </button>
+
         </section>
       </div>
       <Footer />
