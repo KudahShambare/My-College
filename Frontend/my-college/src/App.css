@@ -1,0 +1,36 @@
+#home{
+  background-image:url("../src/Images/Background.jpg");
+  Background-repeat:no-repeat;
+  Background-size:cover;
+  height:90vh;
+  margin-bottom: 0;
+  float: bottom;
+}
+#loginNav{
+  margin-left: 90%;
+  font-size: xx-large;
+}
+#homeButtons{
+  margin-top:50vh;
+  margin-left:20%;
+  margin-top: 10%;
+  
+}
+button{
+  background-color:skyblue;
+  height:15vh;
+  width:30vw;
+  font-size: xx-large;
+
+}
+#footer{
+  background-color:black;
+  height:50vh;
+  color:aliceblue;
+  margin-top: 0%;
+  display:grid;
+  grid-template-columns:auto auto auto;
+}
+h1{
+  text-align: center;
+}
