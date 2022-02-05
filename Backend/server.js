@@ -16,9 +16,6 @@ client.connect();
 
 
 /*Routes*/
-app.get("/",(req,resp)=>{
-    resp.send(process.env.db_password)
-})
 
 app.get("/courses",(req,resp)=>{
     client.query("select * from courses",(error,result)=>{
@@ -44,7 +41,7 @@ app.get("/applicants",(req,resp)=>{
 })
 
 
-const PORT=process.env.PORT || 5500 ;
+const PORT= 5500  ;
 app.listen(PORT,()=>{
     console.log("App started to port "+PORT);
 })
