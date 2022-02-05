@@ -5,6 +5,9 @@ const Footer =()=>{
         <div id="footer">
 <section>
 <h3>Academic Announcements</h3>
+<>
+<p> Schools to open</p>
+</>
 </section>
 <section>
    <h3>Global Education Info</h3> 

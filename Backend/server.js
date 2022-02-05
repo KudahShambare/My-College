@@ -41,7 +41,7 @@ app.get("/applicants",(req,resp)=>{
 })
 
 
-const PORT= 5500  ;
+const PORT= 5000  ;
 app.listen(PORT,()=>{
     console.log("App started to port "+PORT);
 })
