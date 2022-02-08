@@ -23,7 +23,7 @@ const Home = () => {
         </section>
      
     
-        <section id="homeButtons">
+        <section className="navButtons">
        <Link to="/courses"> 
        <button> View Our Courses </button>
        </Link>

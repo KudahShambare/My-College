@@ -17,7 +17,7 @@
   float: bottom;
 }
 
-#homeButtons{
+.navButtons{
   margin-top:50vh;
   margin-left:20%;
   margin-top: 10%;
@@ -28,6 +28,7 @@ button{
   height:15vh;
   width:30vw;
   font-size: xx-large;
+  margin-bottom: 5%;
 
 }
 h1{
@@ -43,7 +44,16 @@ h1{
  margin-top:0
 }
 
+/*Login*/
+.noAccount{
+  margin-left: 30%;
+  font-size: xx-large;
+  color:rgb(198, 230, 238);
+  font-weight: bold;
+  background-color: black;
+  text-decoration: none;
 
+}
 /*Footer*/
 #footer{
   background-color:black;

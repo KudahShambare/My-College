@@ -3,7 +3,9 @@ import Home from "../src/Pages/Home.js"
 import {Switch,Route,BrowserRouter} from "react-router-dom";
 import Courses from '../src/Pages/Courses';
 import Enrollments from "../src/Pages/Enrollments"
-import LogIn from "../src/Pages/LogIn"
+import LogIn from "../src/Pages/LogIn";
+import StudentLogin from  "../src/Pages/StudentLogin";
+import StaffLogin from "../src/Pages/StaffLogin";
 function App() {
   return (
     <div className="App">
@@ -12,6 +14,9 @@ function App() {
         <Route  path="/courses" component={Courses}/>
         <Route  path="/enrollments" component={Enrollments}/>
         <Route  path="/login" component={LogIn}/>
+        <Route  path="/student-login" component={StudentLogin}/>
+        <Route  path="/staff-login" component={StaffLogin}/>
+        <Route  path="/courses" component={Courses}/>
 
 
       </Switch>
