@@ -2,6 +2,7 @@ import React from "react";
 import Footer from "../Components/Footer.js";
 import { Link} from "react-router-dom";
 import Logo from "../Images/College.png";
+import FormCard from "../Components/FormCard"
 
 const StudentLogin=()=>{
     return(
@@ -9,6 +10,8 @@ const StudentLogin=()=>{
             <Link to="/">
                 <img src={Logo} alt="logo" className="logo" height="400" />
             </Link>
+            <FormCard status="Student" videoUrl="https://www.youtube.com/watch?v=AGKftaUwJh4"/>
+
         </div><Footer /></>
     )
 }

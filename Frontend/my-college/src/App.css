@@ -54,6 +54,34 @@ h1{
   text-decoration: none;
 
 }
+#formCard{
+  display: grid;
+  grid-template-columns: 50% 50% ;
+  background-color: aliceblue;
+  height: 65vh;
+  width:85vw;
+  margin: 2% auto auto 5%;
+}
+
+form{
+  display:grid;
+  grid-template-columns:auto;
+  background-color: rgb(202, 241, 228);
+  text-align: center;
+}
+.submitButton{
+  text-align: center;
+  width: 10vw;
+  height: 7vh;
+  margin-left: 40%;
+  
+}
+iframe{
+  height:40vh;
+  width:30vw;
+  margin:5% auto auto 15% ;
+}
+
 /*Footer*/
 #footer{
   background-color:black;

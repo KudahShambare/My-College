@@ -1,6 +1,6 @@
 import './App.css';
 import Home from "../src/Pages/Home.js"
-import {Switch,Route,BrowserRouter} from "react-router-dom";
+import {Switch,Route} from "react-router-dom";
 import Courses from '../src/Pages/Courses';
 import Enrollments from "../src/Pages/Enrollments"
 import LogIn from "../src/Pages/LogIn";
