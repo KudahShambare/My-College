@@ -6,6 +6,7 @@ import Enrollments from "../src/Pages/Enrollments"
 import LogIn from "../src/Pages/LogIn";
 import StudentLogin from  "../src/Pages/StudentLogin";
 import StaffLogin from "../src/Pages/StaffLogin";
+import CreateAccount from './Pages/CreateAccount';
 function App() {
   return (
     <div className="App">
@@ -17,6 +18,7 @@ function App() {
         <Route  path="/student-login" component={StudentLogin}/>
         <Route  path="/staff-login" component={StaffLogin}/>
         <Route  path="/courses" component={Courses}/>
+        <Route  path="/create-account" component={CreateAccount}/>
 
 
       </Switch>
