@@ -2,7 +2,6 @@ import React from "react";
 
 const FormCard = (props) => {
  
-
   return (
     <div id="formCard">
       <section>
@@ -13,23 +12,24 @@ const FormCard = (props) => {
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"/>
     </section>
-    <form>
+    {/* Form action varies with prop value*/}
+    <form method="get" action={"/"+props.status+"login"}>
       <h2>Login Details</h2>
         <section>
           <label>{props.status} ID:</label>
-          <input type="text" required/>
+          <input type="text" name="id" required  />
         </section>
         <section>
           <label>Username:</label>
-          <input type="text" required/>
+          <input type="text"  name="username" required  />
 
         </section>{" "}
         <section>
           <label>Password:</label>
-          <input type="text" required/>
+          <input type="password" name="password"required/>
 
         </section>
-        <button className="submitButton">Login</button>
+        <button className="submitButton" type="submit" >Login</button>
       </form>
     </div>
   );

@@ -15,8 +15,8 @@ function App() {
         <Route  path="/courses" component={Courses}/>
         <Route  path="/enrollments" component={Enrollments}/>
         <Route  path="/login" component={LogIn}/>
-        <Route  path="/student-login" component={StudentLogin}/>
-        <Route  path="/staff-login" component={StaffLogin}/>
+        <Route  path="/Studentlogin" component={StudentLogin}/>
+        <Route  path="/Stafflogin" component={StaffLogin}/>
         <Route  path="/courses" component={Courses}/>
         <Route  path="/create-account" component={CreateAccount}/>
 

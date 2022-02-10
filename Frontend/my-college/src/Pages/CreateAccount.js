@@ -10,23 +10,23 @@ const CreateAccount = () => {
         <Link to="/">
           <img src={Logo} alt="logo" className="logo" height="400" />
         </Link>
-        <form id="createAccount">
+        <form id="createAccount" method="post" action="/createAccount">
           <h2>Create Account</h2>
           <section>
             <label>Username:</label>
-            <input type="text" required />
+            <input type="text" name="username" required />
           </section>{" "}
           <section>
             <label>Password:</label>
-            <input type="text" required />
+            <input type="password" name="password" required />
           </section>
           <section>
             <label>Select Your Role Below:</label><br/>
-          Student  <input type="radio" name="role" value="student"/>
-          Administrator  <input type="radio" name="role" value="administrator"/>
-          Instructor  <input type="radio" name="role" value="instructor"/>
+          Student  <input type="radio" name="role" value="student" required/>
+          Administrator  <input type="radio" name="role" value="administrator" required/>
+          Instructor  <input type="radio" name="role" value="instructor" required/>
           </section>
-          <button id="createAccountButton" >Create Account</button>
+          <button id="createAccountButton" type="submit">Create Account</button>
         </form>
       </div>
       <Footer />
