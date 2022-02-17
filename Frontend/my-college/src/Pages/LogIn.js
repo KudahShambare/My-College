@@ -11,10 +11,10 @@ const LogIn=()=>{
           <img src={Logo}  alt="logo" className="logo" height="400" /> 
           </Link>
 <section className="navButtons">
-       <Link to="/staff-login"> 
+       <Link to="/Stafflogin"> 
        <button> Staff Login </button>
        </Link>
-       <Link to="/student-login"> 
+       <Link to="/Studentlogin"> 
        <button> Student Login </button>
 
        </Link>

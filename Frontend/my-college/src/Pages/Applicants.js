@@ -1,9 +1,15 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
+
+
+
+
 
 const Applicants=()=>{
+  
+
     return(
 <div>
-    <h1>Enrollments</h1>
+    <h1>Applicant</h1>
 </div>
     )
 }
