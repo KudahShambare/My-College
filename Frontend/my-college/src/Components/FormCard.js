@@ -12,8 +12,9 @@ const FormCard = (props) => {
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"/>
     </section>
-    {/* Form action varies with prop value*/}
-    <form method="get" action={"/"+props.status+"login"}>
+    {/* Form action varies with prop value , we use post method to compare with data in DB. Post is ideal 
+    than get beacuse of security reasons*/}
+    <form method="post" action={"/"+props.status+"login"}>
       <h2>Login Details</h2>
         <section>
           <label>{props.status} ID:</label>
