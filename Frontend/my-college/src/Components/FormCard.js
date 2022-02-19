@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 
 const FormCard = (props) => {
   const [userId, setUserId] = useState(0);
@@ -8,27 +9,18 @@ const [reply,setReply]=useState({});
 
 
   const login = () => {
-  fetch("/Studentlogin", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      mode:"cors",
-      body: JSON.stringify({
-        "id":  userId ,
-        "username": name ,
-        "password":  userPassword
-      })
+  
+    axios.post('/Studentlogin', {
+      username: {name},
+      password: {userPassword},
+      id:{userId}
     })
- .then((resp) => {
-        resp.json();
-      })
-      .then((data) => {
-      console.log(data);
-        ;
-     
-        ///alert(data)
-      });
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
 
       
     

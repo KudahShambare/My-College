@@ -44,8 +44,7 @@ app.post("/Studentlogin", (req, resp) => {
   let name = req.body.username;
   let password = req.body.password;
 
-  client
-    .query("select * from students where username=$1 and password=$2 and id=$3", [name,password,id])
+  client.query("select * from students where username=$1 and password=$2 and id=$3", [name,password,id])
     .then((error,result) => {
       if(error){
 resp.send({error:"error"})
