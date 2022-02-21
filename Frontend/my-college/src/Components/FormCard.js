@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 
 const FormCard = (props) => {
-  const [userId, setUserId] = useState(0);
+  const [userId, setUserId] = useState("");
   const [name, setName] = useState("");
   const [userPassword, setUserPassword] = useState("");
 const [reply,setReply]=useState({});
@@ -10,13 +10,14 @@ const [reply,setReply]=useState({});
 
   const login = () => {
   
-    axios.post('/Studentlogin', {
+    axios.post('http://localhost:5000/Studentlogin', {
       username: {name},
       password: {userPassword},
       id:{userId}
     })
     .then(function (response) {
       console.log(response);
+      setReply()
     })
     .catch(function (error) {
       console.log(error);
