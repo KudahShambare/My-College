@@ -2,38 +2,34 @@ import React, { useState } from "react";
 import axios from "axios";
 
 const FormCard = (props) => {
-  const [userId, setUserId] = useState("");
+  const [userId, setUserId] = useState(0);
   const [name, setName] = useState("");
   const [userPassword, setUserPassword] = useState("");
-const [reply,setReply]=useState({});
-
+  const [reply, setReply] = useState({});
 
   const login = () => {
-  
-    axios.post('http://localhost:5000/Studentlogin', {
-      username: {name},
-      password: {userPassword},
-      id:{userId}
-    })
-    .then(function (response) {
-      console.log(response);
-      setReply()
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
-
-      
-    
-    
+    axios
+      .post("http://localhost:5000/Studentlogin", {
+        username: { name },
+        password: { userPassword },
+        
+      })
+      .then(
+        function (response) {
+          console.log(response);
+          setReply(response.status);
+          console.log(reply);
+        }
+      )
+      .catch(function (error) {
+        console.log(error);
+      });
   };
 
   return (
     <div id="formCard">
       <section>
         <h1>{props.status} Tips</h1>
-<h3> name : {reply.name} </h3>
-{console.log({reply})}
         <iframe
           src={`https://www.youtube.com/embed/${props.videoUrl.split("=")[1]}`}
           title="YouTube video player"
@@ -44,22 +40,11 @@ const [reply,setReply]=useState({});
     than get beacuse of security reasons*/}
       <form>
         <h2>Login Details</h2>
-        <section>
-          <label>{props.status} ID:</label>
-          <input
-            type="number"
-        
-            required
-            onChange={(e) => {
-              setUserId(e.target.value);
-            }}
-          />
-        </section>
+      
         <section>
           <label>Username:</label>
           <input
             type="text"
-            
             required
             onChange={(e) => {
               setName(e.target.value);
@@ -70,7 +55,6 @@ const [reply,setReply]=useState({});
           <label>Password:</label>
           <input
             type="password"
-        
             onChange={(e) => {
               setUserPassword(e.target.value);
             }}
