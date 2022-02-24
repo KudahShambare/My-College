@@ -6,30 +6,39 @@ import { useHistory} from "react-router-dom"
 >>>>>>> Stashed changes
 
 const FormCard = (props) => {
+<<<<<<< Updated upstream
   const [name, setName] = useState("");
   const [userPassword, setUserPassword] = useState("");
 <<<<<<< Updated upstream
 const [reply,setReply]=useState({});
+=======
+  
+  const [name, setName] = useState("");
+  const [userPassword, setUserPassword] = useState("");
+const [profileName,setProfileName]=useState("");
+>>>>>>> Stashed changes
 
 
-  const login = () => {
-  fetch("/Studentlogin", {
+  const login = (e) => {
+e.preventDefault();
+  fetch("http://localhost:5000/Studentlogin", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      mode:"cors",
+    headers:{
+      'Content-Type': 'application/json'
+    },
+   
       body: JSON.stringify({
-        "id":  userId ,
-        "username": name ,
-        "password":  userPassword
+       
+        username: name,
+        password:  userPassword
       })
     })
  .then((resp) => {
-        resp.json();
+        return resp.json();
       })
       .then((data) => {
       console.log(data);
+<<<<<<< Updated upstream
         ;
      
         ///alert(data)
@@ -66,6 +75,10 @@ let history=useHistory();
       .catch((error) => {
         console.log("error: " + error);
 >>>>>>> Stashed changes
+=======
+      setProfileName(data.username)
+               
+>>>>>>> Stashed changes
       });
 
       
@@ -78,8 +91,7 @@ let history=useHistory();
     <div id="formCard">
       <section>
         <h1>{props.status} Tips</h1>
-<h3> name : {reply.name} </h3>
-{console.log({reply})}
+
         <iframe
           src={`https://www.youtube.com/embed/${props.videoUrl.split("=")[1]}`}
           title="YouTube video player"
@@ -90,6 +102,7 @@ let history=useHistory();
     than get beacuse of security reasons*/}
       <form>
         <h2>Login Details</h2>
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
         <section>
           <label>{props.status} ID:</label>
@@ -103,6 +116,9 @@ let history=useHistory();
           />
         </section>
 =======
+>>>>>>> Stashed changes
+=======
+   
 >>>>>>> Stashed changes
         <section>
           <label>Username:</label>

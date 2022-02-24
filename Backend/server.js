@@ -39,10 +39,10 @@ app.get("/applicants", (req, resp) => {
   });
 });
 app.post("/Studentlogin", (req, resp) => {
-  let id = req.body.id;
   let name = req.body.username;
   let password = req.body.password;
 
+<<<<<<< Updated upstream
   client
 <<<<<<< Updated upstream
     .query("select * from students where username=$1 and password=$2 and id=$3", [name,password,id])
@@ -57,20 +57,33 @@ let valueArray=result.rows;
         resp.send("User/password not found")
 =======
     .query("select * from students where username=$1 and password=$2 ", [
+=======
+  client.query("select * from students where username=$1 and password=$2", [
+>>>>>>> Stashed changes
       name,
       password,
     ])
     .then((error, result) => {
+<<<<<<< Updated upstream
       if (error) {
         resp.send(error);
 >>>>>>> Stashed changes
       }
       if (result) {
         resp.send(result.rows);
+=======
+      
+      if (error) {
+        resp.send(error);
+      }
+      if (result) {
+        resp.json(result.rows);
+>>>>>>> Stashed changes
       }
     });
 });
 /*Post Requests*/
+
 app.post("/createAccount", (req, resp) => {
   let username = req.body.username;
   let password = req.body.password;
