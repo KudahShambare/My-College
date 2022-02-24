@@ -7,17 +7,20 @@ const Courses = () => {
 
   const [courses,setCourses]=useState([]);
   useEffect(() => {
-    fetch("/courses").then(resp=>resp.json()
+    fetch("http://localhost:5000/courses").then((resp)=>{
+      setTimeout(() => {
+      return   resp.json();
+      }, 5000);
+     }
     ).then((data)=>{
       setCourses(data);
-      return data;
+    
     }).catch((error)=>{
 
       console.log(error);
     })  
   
   });
-  
   return (
     <>
       <div className="pages">
@@ -26,7 +29,7 @@ const Courses = () => {
           </Link>
         <h1>Courses</h1>
         <ul>
-          {console.log(courses)}
+     {console.log(courses)}
          {courses.map((elem)=>{
            return <li>{elem.course_name}</li>
          })}

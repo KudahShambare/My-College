@@ -7,7 +7,8 @@ import LogIn from "../src/Pages/LogIn";
 import StudentLogin from  "../src/Pages/StudentLogin";
 import StaffLogin from "../src/Pages/StaffLogin";
 import CreateAccount from './Pages/CreateAccount';
-import Applicants from "../src/Pages/Applicants"
+import Applicants from "../src/Pages/Applicants";
+import StudentDashboard from "../src/Components/StudentDashboard.js"
 function App() {
   return (
     <div className="App">
@@ -21,6 +22,8 @@ function App() {
         <Route  path="/courses" component={Courses}/>
         <Route  path="/create-account" component={CreateAccount}/>
         <Route  path="/applicants" component={Applicants}/>
+        <Route  path="/student-dashboard" component={StudentDashboard}/>
+
 
 
       </Switch>

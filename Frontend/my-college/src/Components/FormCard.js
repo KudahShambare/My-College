@@ -1,9 +1,14 @@
 import React, { useState } from "react";
+<<<<<<< Updated upstream
+=======
+import StudentDashboard from "../Components/StudentDashboard.js";
+import { useHistory} from "react-router-dom"
+>>>>>>> Stashed changes
 
 const FormCard = (props) => {
-  const [userId, setUserId] = useState(0);
   const [name, setName] = useState("");
   const [userPassword, setUserPassword] = useState("");
+<<<<<<< Updated upstream
 const [reply,setReply]=useState({});
 
 
@@ -28,12 +33,46 @@ const [reply,setReply]=useState({});
         ;
      
         ///alert(data)
+=======
+  
+  const [profileName,setProfileName]=useState("");
+let history=useHistory();
+  const login = (e) => {
+    //preventing browser from reloading on submit
+    e.preventDefault();
+  
+
+
+    fetch("http://localhost:5000/Studentlogin", {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "post",
+      body: JSON.stringify({
+        username: name,
+        password: userPassword,
+      }),
+    })
+      .then((resp) => {
+        return resp.json();
+      })
+      .then((data) => {
+        console.log(data.rows);
+        setProfileName(data.rows[0].username);
+                  }).then(()=>{
+                    //redirects to dashboard
+                 history.push("/courses")
+                  })
+      .catch((error) => {
+        console.log("error: " + error);
+>>>>>>> Stashed changes
       });
 
       
     
     
   };
+ 
 
   return (
     <div id="formCard">
@@ -51,6 +90,7 @@ const [reply,setReply]=useState({});
     than get beacuse of security reasons*/}
       <form>
         <h2>Login Details</h2>
+<<<<<<< Updated upstream
         <section>
           <label>{props.status} ID:</label>
           <input
@@ -62,6 +102,8 @@ const [reply,setReply]=useState({});
             }}
           />
         </section>
+=======
+>>>>>>> Stashed changes
         <section>
           <label>Username:</label>
           <input

@@ -8,7 +8,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
 
-
 //DB Connection
 const { Client } = require("pg");
 const client = new Client({
@@ -45,6 +44,7 @@ app.post("/Studentlogin", (req, resp) => {
   let password = req.body.password;
 
   client
+<<<<<<< Updated upstream
     .query("select * from students where username=$1 and password=$2 and id=$3", [name,password,id])
     .then((error,result) => {
       if(error){
@@ -55,16 +55,19 @@ let valueArray=result.rows;
       //Checking if resultis available
       if(valueArray.length===0){
         resp.send("User/password not found")
+=======
+    .query("select * from students where username=$1 and password=$2 ", [
+      name,
+      password,
+    ])
+    .then((error, result) => {
+      if (error) {
+        resp.send(error);
+>>>>>>> Stashed changes
       }
-      if(valueArray.length===1){
-        console.log(valueArray);
-        resp.send(valueArray)
+      if (result) {
+        resp.send(result.rows);
       }
-     
-      }
-      
-      
-
     });
 });
 /*Post Requests*/
