@@ -1,26 +1,44 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useHistory } from "react-router-dom";
 
 const FormCard = (props) => {
-  const [userId, setUserId] = useState(0);
+
   const [name, setName] = useState("");
   const [userPassword, setUserPassword] = useState("");
-  const [reply, setReply] = useState({});
 
-  const login = () => {
+
+
+const history=useHistory();
+
+  const login = (e) => {
+    e.preventDefault();
     axios
       .post("http://localhost:5000/Studentlogin", {
-        username: { name },
-        password: { userPassword },
+        username: name,
+        password:userPassword,
         
       })
       .then(
-        function (response) {
-          console.log(response);
-          setReply(response.status);
-          console.log(reply);
+         (resp) =>{
+           if(resp.data.rowCount===0){
+            const form=document.querySelector("form");
+            form.innerHTML="Wrong username/password";
+            setTimeout(()=>{
+              
+            })
+           }
+          console.log(resp.data.rows[0].username);
+        
         }
-      )
+      ).then(()=>{
+        //redirect to Dashboard
+       
+history.push("/StudentDashboard");
+        
+      
+        
+      })
       .catch(function (error) {
         console.log(error);
       });

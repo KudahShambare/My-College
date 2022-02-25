@@ -50,22 +50,13 @@ app.post("/Studentlogin", (req, resp) => {
       resp.send(error);
     }
       if(result){
-let valueArray=result.rows;
-      //Checking if resultis available
-      if(valueArray.length===0){
-        resp.send("User/password not found")
-      }
-      if(valueArray.length===1){
-        console.log(valueArray);
-        resp.send(valueArray)
-      }
-     
-      }
-      
+
+      resp.send(result.rows)
       
 
-    });
+    }
 });
+} )
 /*Post Requests*/
 app.post("/createAccount", (req, resp) => {
   let username = req.body.username;
