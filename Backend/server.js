@@ -8,7 +8,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
 
-
 //DB Connection
 const { Client } = require("pg");
 const client = new Client({
@@ -20,7 +19,10 @@ const client = new Client({
 client.connect();
 
 /*Routes*/
-
+app.get("/", (req, resp) => {
+  resp.send("Server running");
+});
+//Get all courses
 app.get("/courses", (req, resp) => {
   client.query("select * from courses", (error, result) => {
     if (error) {
@@ -30,6 +32,7 @@ app.get("/courses", (req, resp) => {
     }
   });
 });
+//Get all applicants
 app.get("/applicants", (req, resp) => {
   client.query("select * from applicants", (error, result) => {
     if (error) {
@@ -39,25 +42,28 @@ app.get("/applicants", (req, resp) => {
     }
   });
 });
+/*Post Requests*/
+
+//Student Login
 app.post("/Studentlogin", (req, resp) => {
-  let id = req.body.id;
   let name = req.body.username;
   let password = req.body.password;
 
-  client.query("select * from students where username=$1 and password=$2 ", [name,password])
-    .then((error,result) => {
-    if(error){
-      resp.send(error);
-    }
-      if(result){
-
-      resp.send(result.rows)
-      
-
-    }
+  client
+    .query("select * from students where username=$1 and password=$2 ", [
+      name,
+      password,
+    ])
+    .then((error, result) => {
+      if (error) {
+        resp.send(error);
+      }
+      if (result) {
+        resp.send(result.rows);
+      }
+    });
 });
-} )
-/*Post Requests*/
+
 app.post("/createAccount", (req, resp) => {
   let username = req.body.username;
   let password = req.body.password;
@@ -96,7 +102,7 @@ app.post("/createAccount", (req, resp) => {
   }
 });
 
-const PORT = 5000;
+const PORT = 4000;
 app.listen(PORT, () => {
   console.log("App started to port " + PORT);
 });

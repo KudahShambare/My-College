@@ -4,7 +4,7 @@
   margin: 2% auto auto 5%;
 }
 /*Home Page*/
-#homeTop {
+.homeTop  {
   display: grid;
   grid-template-columns: auto auto auto;
 }
@@ -76,6 +76,7 @@ iframe {
   width: 30vw;
   margin: 5% auto auto 15%;
 }
+/*Sign up section*/
 #createAccount{
   background-color: aliceblue;
   width:60vw;
@@ -90,6 +91,12 @@ iframe {
   margin-left: 30%;
   height:7vh;
   width:20vw;
+}
+/* Logout Section*/
+.logout{
+
+  margin: 0% ;
+
 }
 /*Footer*/
 #footer {

@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <>
       <div id="home">
-        <section id="homeTop">
+        <section className="homeTop">
           <Link to="/">
           <img src={Logo}  alt="logo" className="logo" height="400" /> 
           </Link>

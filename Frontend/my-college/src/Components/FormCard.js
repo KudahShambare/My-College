@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
+import StudentDashboard from "./StudentDashboard";
 
 const FormCard = (props) => {
 
@@ -14,19 +15,20 @@ const history=useHistory();
   const login = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:5000/Studentlogin", {
+      .post("http://localhost:4000/Studentlogin", {
         username: name,
         password:userPassword,
         
       })
       .then(
          (resp) =>{
+           //if wrong credentials are passed the page reloads
            if(resp.data.rowCount===0){
             const form=document.querySelector("form");
             form.innerHTML="Wrong username/password";
             setTimeout(()=>{
-              
-            })
+              window.location.reload();
+            },3000)
            }
           console.log(resp.data.rows[0].username);
         
@@ -34,7 +36,7 @@ const history=useHistory();
       ).then(()=>{
         //redirect to Dashboard
        
-history.push("/StudentDashboard");
+history.push("/StudentDashboard",{profileName:name});
         
       
         
