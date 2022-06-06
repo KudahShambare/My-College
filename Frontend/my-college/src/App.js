@@ -12,7 +12,7 @@ import StudentDashboard from "./Components/StudentDashboard";
 
 function App() {
   return (
-    <div className="App">
+    <div >
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/courses" component={Courses} />

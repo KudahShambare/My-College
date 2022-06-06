@@ -4,39 +4,62 @@
   width: 5rem;
   margin: 2% auto auto 5%;
 }
-  /*homepage*/
-  #home {
-    background-image: url("../src/Images/Background.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 80vh;
-    margin-bottom: 0;
-    float: bottom;
-  }
-  .homeTop {
-    display: none;
+/*homepage*/
+#home {
+  background-image: url("../src/Images/Background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh;
+  margin-bottom: 0;
   
-  }
-  #mobileLogInNav{
-   display:inline-flex;
- 
+}
+.homeTop {
+  display: none;
+}
+#mobileLogInNav {
+  display: inline-flex;
+}
+.navButtons {
+  display: none;
+}
+button {
+  background-color: skyblue;
+  height: 5vh;
+  width: 50vw;
+  font-size: large;
+  margin-bottom: 5vh;
+}
+#mobileNavButtons{
+  
+padding-top: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-  }
-  .navButtons{
-    display: none;
-  }
-  
-  #footer {
-    background-color: black;
-    height: 50vh;
-    color: aliceblue;
-    margin-top: 0%;
-    padding-left: 5%;
-    display: grid;
-    grid-template-columns: auto;
-  }
+}
+/*Othe pages*/
+.pages {
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  background-image: url("../src/Images/Background.jpg");
+  height: 80vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#footer {
+  position: absolute;
+  top: 80vh;
+  width: 100%;
+  background-color: black;
+  height: 50vh;
+  color: aliceblue;
+
+  padding-left: 5%;
+}
 /*Larger screens view*/
-@media  screen and (min-width:1054px) {
+@media screen and (min-width: 1054px) {
   .logo {
     height: 10rem;
     width: 10rem;
@@ -55,13 +78,13 @@
     margin-bottom: 0;
     float: bottom;
   }
-  
+
   .navButtons {
     margin-top: 50vh;
     margin-left: 20%;
     margin-top: 10%;
   }
-  #mobileNavButtons{
+  #mobileNavButtons {
     display: none;
   }
   button {
@@ -82,7 +105,7 @@
     background-size: cover;
     margin-top: 0;
   }
-  
+
   /*Login*/
   .noAccount {
     margin-left: 30%;
@@ -100,7 +123,7 @@
     width: 85vw;
     margin: 2% auto auto 5%;
   }
-  
+
   form {
     display: grid;
     grid-template-columns: auto;
@@ -148,6 +171,4 @@
     display: grid;
     grid-template-columns: auto auto auto;
   }
-  
-  
 }
