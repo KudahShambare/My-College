@@ -1,4 +1,40 @@
+/*logo*/
+.logo {
+  height: 5rem;
+  width: 5rem;
+  margin: 2% auto auto 5%;
+}
+  /*homepage*/
+  #home {
+    background-image: url("../src/Images/Background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+    margin-bottom: 0;
+    float: bottom;
+  }
+  .homeTop {
+    display: none;
+  
+  }
+  #mobileLogInNav{
+   display:inline-flex;
+ 
 
+  }
+  .navButtons{
+    display: none;
+  }
+  
+  #footer {
+    background-color: black;
+    height: 50vh;
+    color: aliceblue;
+    margin-top: 0%;
+    padding-left: 5%;
+    display: grid;
+    grid-template-columns: auto;
+  }
 /*Larger screens view*/
 @media  screen and (min-width:1054px) {
   .logo {
@@ -24,6 +60,9 @@
     margin-top: 50vh;
     margin-left: 20%;
     margin-top: 10%;
+  }
+  #mobileNavButtons{
+    display: none;
   }
   button {
     background-color: skyblue;
