@@ -1,3 +1,11 @@
+/*headings*/
+h1 {
+  text-align: center;
+}
+#homeWelcomeMobile {
+  background-color: rgb(240, 284, 255, 0.6);
+}
+
 /*logo*/
 .logo {
   height: 5rem;
@@ -9,9 +17,8 @@
   background-image: url("../src/Images/Background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 80vh;
+  height: 50vh;
   margin-bottom: 0;
-  
 }
 .homeTop {
   display: none;
@@ -29,13 +36,11 @@ button {
   font-size: large;
   margin-bottom: 5vh;
 }
-#mobileNavButtons{
-  
-padding-top: 20vh;
+#mobileNavButtons {
+  padding-top: 0vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 /*Othe pages*/
 .pages {
@@ -47,13 +52,29 @@ padding-top: 20vh;
   background-repeat: no-repeat;
   background-size: cover;
 }
+/*Create Account*/
+#createAccount {
+  margin-top: 3vh;
+  background-color: rgb(240, 284, 255, 0.6);
+  text-align: center;
+  width: 80vw;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding: 3%;
+  font-size: medium;
+}
+label {
+  font-weight: bolder;
+}
 
 #footer {
   position: absolute;
-  top: 80vh;
+  top: 50vh;
   width: 100%;
   background-color: black;
-  height: 50vh;
+  height: 60vh;
   color: aliceblue;
 
   padding-left: 5%;
@@ -78,7 +99,9 @@ padding-top: 20vh;
     margin-bottom: 0;
     float: bottom;
   }
-
+  #mobileHomeTop {
+    display: none;
+  }
   .navButtons {
     margin-top: 50vh;
     margin-left: 20%;

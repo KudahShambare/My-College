@@ -12,7 +12,7 @@ const Home = () => {
           <Link to="/">
           <img src={Logo}  alt="logo" className="logo" height="400" /> 
           </Link>
-           <h1>Welcome To The Fake College</h1>
+           <h1 >Welcome To The Fake College</h1>
   
  <section id="logInNav">
  <Link to="/login">
@@ -35,7 +35,7 @@ const Home = () => {
     <h2 style={{fontSize:'1rem',marginTop:'0%'}}>Log In</h2>
      </Link>
        </section>
-       <h1>Welcome To The Fake College</h1>
+       <h1 id="homeWelcomeMobile">Welcome To The Fake College</h1>
 
 
      </section>
