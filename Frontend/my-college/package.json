@@ -4,6 +4,7 @@
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
   "dependencies": {
+    "async": "^3.2.4",
     "axios": "^0.26.0",
     "ejs": "^3.1.8",
     "minimist": "^1.2.6",
