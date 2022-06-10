@@ -6,6 +6,7 @@
   "dependencies": {
     "axios": "^0.26.0",
     "ejs": "^3.1.8",
+    "minimist": "^1.2.6",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
     "react-router-dom": "^5.3.0",
