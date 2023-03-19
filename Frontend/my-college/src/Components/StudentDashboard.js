@@ -4,14 +4,14 @@ import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { FaRegUserCircle } from "react-icons/fa";
 import Logo from "../Images/College.png";
-import { useHistory } from "react-router-dom";
+//import { useHistory } from "react-router-dom";
 
 const StudentDashboard=(props)=>{
-  const history=useHistory();
+  //const history=useHistory();
   const location= useLocation();
 
   const logout=()=>{
-    history.push("/StudentDashboard",{profileName:" User, you have been logged out."});
+  //  history.push("/StudentDashboard",{profileName:" User, you have been logged out."});
 
     //location.reload();
   }

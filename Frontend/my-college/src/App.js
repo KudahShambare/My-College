@@ -1,6 +1,6 @@
 import "./App.css";
 import Home from "../src/Pages/Home.js";
-import { Switch, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Courses from "../src/Pages/Courses";
 import Enrollments from "../src/Pages/Enrollments";
 import LogIn from "../src/Pages/LogIn";
@@ -9,22 +9,27 @@ import StaffLogin from "../src/Pages/StaffLogin";
 import CreateAccount from "./Pages/CreateAccount";
 import Applicants from "../src/Pages/Applicants";
 import StudentDashboard from "./Components/StudentDashboard";
+import NotFound from "./Pages/NotFound";
 
 function App() {
+
+
   return (
     <div >
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/courses" component={Courses} />
-        <Route path="/enrollments" component={Enrollments} />
-        <Route path="/login" component={LogIn} />
-        <Route path="/Studentlogin" component={StudentLogin} />
-        <Route path="/Stafflogin" component={StaffLogin} />
-        <Route path="/courses" component={Courses} />
-        <Route path="/create-account" component={CreateAccount} />
-        <Route path="/applicants" component={Applicants} />
-        <Route path="/StudentDashboard" component={StudentDashboard} />
-      </Switch>
+      <Routes>
+        <Route exact path="/" element={<Home/>} />
+        <Route exact path="/courses" element={<Courses/>} />
+        <Route exact path="/enrollments" element={<Enrollments/>} />
+        <Route exact path="/login" element={<LogIn/>} />
+        <Route exact path="/Studentlogin" element={<StudentLogin/>} />
+        <Route exact path="/Stafflogin" element={<StaffLogin/>} />
+        <Route exact path="/courses" element={<Courses/>} />
+        <Route exact path="/create-account" element={<CreateAccount/>} />
+        <Route exact path="/applicants" element={<Applicants/>} />
+        <Route exact path="/StudentDashboard" element={<StudentDashboard/>} />
+        <Route path="/" element={<NotFound/>} />
+
+      </Routes>
     </div>
   );
 }

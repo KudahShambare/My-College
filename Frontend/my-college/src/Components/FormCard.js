@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useHistory } from "react-router-dom";
+//import { useHistory } from "react-router-dom";
 import StudentDashboard from "./StudentDashboard";
 
 const FormCard = (props) => {
@@ -10,7 +10,7 @@ const FormCard = (props) => {
 
 
 
-const history=useHistory();
+//const history=useHistory();
 
   const login = (e) => {
     e.preventDefault();
@@ -36,7 +36,7 @@ const history=useHistory();
       ).then(()=>{
         //redirect to Dashboard
        
-history.push("/StudentDashboard",{profileName:name});
+//history.push("/StudentDashboard",{profileName:name});
         
       
         
