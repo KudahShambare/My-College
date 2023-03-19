@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Footer from "../Components/Footer";
 import { Link } from "react-router-dom";
-import Logo from "../Images/College.png";
 
 const Courses = () => {
 

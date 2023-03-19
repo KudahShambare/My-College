@@ -3,7 +3,6 @@ import Footer from "../Components/Footer";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { FaRegUserCircle } from "react-icons/fa";
-import Logo from "../Images/College.png";
 //import { useHistory } from "react-router-dom";
 
 const StudentDashboard=(props)=>{

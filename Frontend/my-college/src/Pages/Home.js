@@ -1,71 +1,83 @@
-import React from "react";
-import Footer from "../Components/Footer.js";
+//IMPORT npm modules
+
 import { FaRegUserCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import Logo from "../Images/College.png";
+
+//import local modules
+
+import IBM from "../Images/IBM.jpeg";
+import UN from "../Images/UN.jpeg";
+import UWC from "../Images/UWC.jpg";
+import UZ from "../Images/UZ.png";
+import Logo from "../Images/logo.png";
+import eLearn from "../Images/eLearn.jpg";
+import Footer from "../Components/Footer.js";
+
+
+
+
 const Home = () => {
-  return (
-    <>
-      <div id="home">
-        {/*Desktop home page*/}
-        <section className="homeTop">
-          <Link to="/">
-          <img src={Logo}  alt="logo" className="logo" height="400" /> 
-          </Link>
-           <h1 >Welcome To The Fake College</h1>
+   return(
+
+<>
+    <main className="pages">
+
+    <div id="welcome">
+
+    <h1> Kuda University</h1>
   
- <section id="logInNav">
- <Link to="/login">
-     <FaRegUserCircle  style={{fontSize:'5rem', marginLeft:'50%',Color:'black'}}/>
-    <h2 style={{fontSize:'2rem', marginLeft:'50%',marginTop:'0px'}}>Log In</h2>
-     </Link>
-       </section>
+    <img src={eLearn} alt="E-learning" id="elearn"/>
+   <h4 className="captions"> Number 1 e-School in Africa  </h4>
  
-        </section>
-        {/* Mobile Home*/}
-     <section id="mobileHomeTop">
 
-     <Link to="/" >
-          <img src={Logo}  alt="logo" className="logo" height="400" style={{marginRight:"45%"}}/> 
-          </Link>
-  
- <section  id="mobileLogInNav" >
- <Link to="/login" >
-     <FaRegUserCircle  style={{fontSize:'3rem',Color:'black'}}/>
-    <h2 style={{fontSize:'1rem',marginTop:'0%'}}>Log In</h2>
-     </Link>
-       </section>
-       <h1 id="homeWelcomeMobile">Welcome To The Fake College</h1>
+    </div>
 
+    <div id="about-us">
+<h2> About Us </h2>
 
-     </section>
-    {/* Home Buttons Big Screen*/}
-        <section className="navButtons">
-       <Link to="/courses"> 
-       <button> View Our Courses </button>
-       </Link>
-       <Link to="/enrollments"> 
-       <button> Get Enrolled Today </button>
+<p>
+Kuda University is an accredited online higher education institution. Our programmes are grouped into 5 faculties namely: Information Technology, Social Sciences, Business and Commerce , Media and Arts and Law. All our qulifications are globally recognised. Our head office is in Zimbabwe but we enroll students fromm 20 African countries. 
+</p>
 
-       </Link>
+<h3> Why study with us? </h3>
+
+<ul>
+
+<li> Self-paced learning </li>
+<li> Course available in 20+ languages </li>
+<li>100% online, no accomodation costs </li>
+<li> 40% cheaper than traditional universities </li>
+<li> Our syllabus is regularly updated to meet new industry trends </li>
 
 
-        </section>
-        {/* Home Buttons Mobile*/}
-        <section id="mobileNavButtons">
-       <Link to="/courses"> 
-       <button> View Our Courses </button>
-       </Link>
-       <Link to="/enrollments"> 
-       <button> Get Enrolled Today </button>
+</ul>
 
-       </Link>
+    </div>
+
+<button id="join"> Join Us Today! </button>
+    
+
+    <h3> Our Partners </h3>
+
+    <ul id="partners">
+
+<li><img className="single-partner" src={UWC} alt="UWC" /> </li>
+<li><img className="single-partner" src={UZ} alt="UZ" /> </li>
+<li><img className="single-partner" src={IBM} alt="IBM" /> </li>
+<li><img className="single-partner" src={UN} alt="UN" /> </li>
 
 
-        </section>
-      </div>
-      <Footer />
+    </ul>
+
+
+
+     
+     </main>
+      <Footer/>
     </>
-  );
+
+      ) 
+
+  
 };
 export default Home;

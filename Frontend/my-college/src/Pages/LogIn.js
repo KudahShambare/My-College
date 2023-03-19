@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from "../Components/Footer.js";
 import { Link} from "react-router-dom";
-import Logo from "../Images/College.png";
+import Logo from "../Images/logo.png";
 
 const LogIn=()=>{
     return(

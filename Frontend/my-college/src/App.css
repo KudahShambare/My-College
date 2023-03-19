@@ -1,197 +1,76 @@
-/*headings*/
-h1 {
-  text-align: center;
-}
-#homeWelcomeMobile {
-  background-color: rgb(240, 284, 255, 0.6);
-}
-
-/*logo*/
-.logo {
-  height: 5rem;
-  width: 5rem;
-  margin: 2% auto auto 5%;
-}
-/*homepage*/
-#home {
-  background-image: url("../src/Images/Background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 50vh;
-  margin-bottom: 0;
-}
-.homeTop {
-  display: none;
-}
-#mobileLogInNav {
-  display: inline-flex;
-}
-.navButtons {
-  display: none;
-}
-button {
-  background-color: skyblue;
-  height: 5vh;
-  width: 50vw;
-  font-size: large;
-  margin-bottom: 5vh;
-}
-#mobileNavButtons {
-  padding-top: 0vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-/*Othe pages*/
-.pages {
-  position: absolute;
-  top: 0%;
-  width: 100%;
-  background-image: url("../src/Images/Background.jpg");
-  height: 80vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-/*Create Account*/
-#createAccount {
-  margin-top: 3vh;
-  background-color: rgb(240, 284, 255, 0.6);
-  text-align: center;
-  width: 80vw;
+/*Welcome Page*/
+#elearn{
+  width: 90%;
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+/*Image Captions*/
+.captions{
+  text-align: center;
+  color: darkred;
+}
 
-  padding: 3%;
+/*Partners*/
+#partners{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: space-between;
+}
+
+.single-partner{
+width: 70px;
+}
+/*Buttons*/
+#join{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: green;
+  color: white;
+  width: 40vw;
   font-size: medium;
-}
-label {
-  font-weight: bolder;
+  border: none;
 }
 
-#footer {
-  position: absolute;
-  top: 50vh;
-  width: 100%;
+/*Footer*/
+footer{
   background-color: black;
-  height: 60vh;
-  color: aliceblue;
-
-  padding-left: 5%;
+  color: white;
 }
-/*Larger screens view*/
-@media screen and (min-width: 1054px) {
-  .logo {
-    height: 10rem;
-    width: 10rem;
-    margin: 2% auto auto 5%;
-  }
-  /*Home Page*/
-  .homeTop {
-    display: grid;
-    grid-template-columns: auto auto auto;
-  }
-  #home {
-    background-image: url("../src/Images/Background.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 90vh;
-    margin-bottom: 0;
-    float: bottom;
-  }
-  #mobileHomeTop {
-    display: none;
-  }
-  .navButtons {
-    margin-top: 50vh;
-    margin-left: 20%;
-    margin-top: 10%;
-  }
-  #mobileNavButtons {
-    display: none;
-  }
-  button {
-    background-color: skyblue;
-    height: 15vh;
-    width: 30vw;
-    font-size: xx-large;
-    margin-bottom: 5%;
-  }
-  h1 {
-    text-align: center;
-  }
-  /*Other Pages*/
-  .pages {
-    background-image: url("../src/Images/Background.jpg");
-    height: 90vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-top: 0;
-  }
+footer, h1 {
+  text-align: center;
+}
+#footer-icon-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+    font-size:xx-small;
 
-  /*Login*/
-  .noAccount {
-    margin-left: 30%;
-    font-size: xx-large;
-    color: rgb(198, 230, 238);
-    font-weight: bold;
-    background-color: black;
-    text-decoration: none;
   }
-  #formCard {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    background-color: aliceblue;
-    height: 65vh;
-    width: 85vw;
-    margin: 2% auto auto 5%;
-  }
+/*Tablet View*/
 
-  form {
-    display: grid;
-    grid-template-columns: auto;
-    background-color: rgb(202, 241, 228);
-    text-align: center;
+@media screen and (min-width:500px){
+
+
+}
+
+/*Desktiop View*/
+@media screen and (min-width:700px){
+/*Footer*/
+
+    footer{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around ;
+
   }
-  .submitButton {
-    text-align: center;
-    width: 10vw;
-    height: 7vh;
-    margin-left: 40%;
+  .footer-icon{
+    display: none;
+    
+
+  
   }
-  iframe {
-    height: 40vh;
-    width: 30vw;
-    margin: 5% auto auto 15%;
-  }
-  /*Sign up section*/
-  #createAccount {
-    background-color: aliceblue;
-    width: 60vw;
-    margin: 5% 20%;
-    display: grid;
-    grid-template-columns: auto;
-    gap: 5%;
-    padding: 3%;
-    font-size: larger;
-  }
-  #createAccountButton {
-    margin-left: 30%;
-    height: 7vh;
-    width: 20vw;
-  }
-  /* Logout Section*/
-  .logout {
-    margin: 0%;
-  }
-  /*Footer*/
-  #footer {
-    background-color: black;
-    height: 50vh;
-    color: aliceblue;
-    margin-top: 0%;
-    padding-left: 5%;
-    display: grid;
-    grid-template-columns: auto auto auto;
-  }
+  
 }

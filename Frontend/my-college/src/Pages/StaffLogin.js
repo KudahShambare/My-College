@@ -1,7 +1,6 @@
 import React from "react";
 import Footer from "../Components/Footer.js";
 import { Link } from "react-router-dom";
-import Logo from "../Images/College.png";
 import FormCard from "../Components/FormCard"
 
 const StaffLogin = () => {
