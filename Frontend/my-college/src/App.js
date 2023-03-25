@@ -8,7 +8,6 @@ import StudentLogin from "../src/Pages/StudentLogin";
 import StaffLogin from "../src/Pages/StaffLogin";
 import CreateAccount from "./Pages/CreateAccount";
 import Applicants from "../src/Pages/Applicants";
-import StudentDashboard from "./Components/StudentDashboard";
 import NotFound from "./Pages/NotFound";
 
 function App() {
@@ -26,7 +25,6 @@ function App() {
         <Route exact path="/courses" element={<Courses/>} />
         <Route exact path="/create-account" element={<CreateAccount/>} />
         <Route exact path="/applicants" element={<Applicants/>} />
-        <Route exact path="/StudentDashboard" element={<StudentDashboard/>} />
         <Route path="/" element={<NotFound/>} />
 
       </Routes>

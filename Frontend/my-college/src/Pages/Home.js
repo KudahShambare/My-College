@@ -12,6 +12,7 @@ import UZ from "../Images/UZ.png";
 import Logo from "../Images/logo.png";
 import eLearn from "../Images/eLearn.jpg";
 import Footer from "../Components/Footer.js";
+import HamburgerIcon from "../Components/Hamburger";
 
 
 
@@ -23,6 +24,8 @@ const Home = () => {
     <main className="pages">
 
     <div id="welcome">
+
+    <HamburgerIcon/>
 
     <h1> Kuda University</h1>
   
