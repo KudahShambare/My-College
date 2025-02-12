@@ -1,6 +1,8 @@
 import React from "react";
 import Footer from "../Components/Footer.js";
 import { Link} from "react-router-dom";
+import Logo from "../assets/logo.png";
+
 
 const StudentLogin=()=>{
     return(
