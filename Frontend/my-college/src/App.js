@@ -19,13 +19,12 @@ function App() {
         <Route exact path="/" element={<Home/>} />
         <Route exact path="/courses" element={<Courses/>} />
         <Route exact path="/enrollments" element={<Enrollments/>} />
-        <Route exact path="/login" element={<LogIn/>} />
+        <Route exact path="/join" element={<LogIn/>} />
         <Route exact path="/Studentlogin" element={<StudentLogin/>} />
         <Route exact path="/Stafflogin" element={<StaffLogin/>} />
-        <Route exact path="/courses" element={<Courses/>} />
         <Route exact path="/create-account" element={<CreateAccount/>} />
         <Route exact path="/applicants" element={<Applicants/>} />
-        <Route path="/" element={<NotFound/>} />
+        <Route path="*" element={<NotFound/>} />
 
       </Routes>
     </div>
